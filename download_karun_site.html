@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DownloadKarun - Video Downloader</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .note {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DownloadKarun</h1>
+    <p style="text-align:center;">Download videos from YouTube, Facebook, Instagram, TikTok, and Twitter</p>
+    <input type="text" id="videoUrl" placeholder="Paste your video link here" />
+    <button onclick="downloadVideo()">Download Now</button>
+    <div class="note">This tool uses third-party APIs. No content is hosted on our server.</div>
+  </div>
+
+  <script>
+    function downloadVideo() {
+      const url = document.getElementById("videoUrl").value;
+      if (!url) {
+        alert("Please paste a valid video URL.");
+        return;
+      }
+      // Redirect to a third-party API like y2mate, or just simulate
+      window.open("https://en.savefrom.net/1-q/?url=" + encodeURIComponent(url), "_blank");
+    }
+  </script>
+</body>
+</html>
